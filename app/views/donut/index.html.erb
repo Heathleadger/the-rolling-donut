@@ -1,0 +1,16 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @donuts.each do |donut| %>
+            <tr>
+                <th><%= donut.name %></th>
+                <th><%= link_to "Delete", donut_path(donut), method: :delete, class: "btn btn-xs btn-danger" %></th>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'order/new'
+
+  resources :donut
+
+  devise_for :users
   root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
